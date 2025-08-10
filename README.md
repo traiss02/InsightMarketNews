@@ -62,11 +62,11 @@ Configurez les clés API pour **Twitter (X v2)** dans le fichier `.env`.
 
 ## Contribuer
 
-Les contributions sont les bienvenues ! Veuillez soumettre une **pull request** ou ouvrir une **issue** pour discuter des améliorations.
+Ce projet dévéloppé **traiss02** et **mohamedberte** . Les contributions sont les bienvenues ! Veuillez soumettre une **pull request** ou ouvrir une **issue** pour discuter des améliorations.
 
 ## Licence
 
-Ce projet dévéloppé **traiss02** et **mohamedberte** est sous licence **Free**. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+Ce projet est sous licence **Free**. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
 ## Structure du Projet
 

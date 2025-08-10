@@ -66,7 +66,7 @@ Les contributions sont les bienvenues ! Veuillez soumettre une **pull request** 
 
 ## Licence
 
-Ce projet est sous licence **Free**. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+Ce projet dévéloppé **traiss02** et **mohamedberte** est sous licence **Free**. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
 ## Structure du Projet
 

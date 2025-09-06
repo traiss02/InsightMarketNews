@@ -1,5 +1,8 @@
 # Insight Market News
 
+<img width="606" height="394" alt="Capture d’écran 2024-10-23 à 23 16 21" src="https://github.com/user-attachments/assets/d69596b7-4e75-4579-8863-81e45ebaf043" />
+
+
 Votre source quotidienne d’analyses et d’actualités sur l’économie, la finance, la politique et la santé. Suivez nos insights pour prendre des décisions plus éclairées.
 
 ## Objectif du Projet

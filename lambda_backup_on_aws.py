@@ -36,15 +36,16 @@ def format_TwitterPost(post_brut:str)-> str:
         print(f"Error generating the post:{e}")
         return ""
 
-'''def save_blog_details_s3(s3_key, s3_bucket, post_formatted):
-    s3=boto3.client('s3')
-
+def save_blog_details_s3(s3_key, s3_bucket, post_formatted):
+    s3 = boto3.client('s3')
+    
     try:
-        s3.put_object(Bucket = s3_bucket, Key = s3_key, Body =post_formatted )
+        s3.put_object(Bucket=s3_bucket, Key=s3_key, Body=post_formatted)
         print("Tweets saved to s3")
-
+        return True
     except Exception as e:
-        print("Error when saving the Tweets to s3")'''
+        print(f"Error when saving the Tweets to s3: {e}")
+        return False
 
 def lambda_handler(event, context):
     # event = json.loads(event['body'])  # Uncomment this line if necessary to parse event body as JSON
@@ -53,10 +54,10 @@ def lambda_handler(event, context):
     post_formatted = format_TwitterPost(post_brut=post_brut)
 
     if post_formatted:
-        # current_time = datetime.now().strftime('%H%M%S')
-        # s3_key = f"post_formatted-output/{current_time}.txt"
-        # s3_bucket = 'aws_bedrock_insightMarketNews'
-        # save_blog_details_s3(s3_key, s3_bucket, generate_blog)
+        current_time = datetime.now().strftime('%H%M%S')
+        s3_key = f"post_formatted-output/{current_time}.txt"
+        s3_bucket = 'aws_bedrock_insightMarketNews'
+        save_blog_details_s3(s3_key, s3_bucket, post_formatted)
     
         return {
             'statusCode': 200,

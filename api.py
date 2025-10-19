@@ -111,21 +111,6 @@ class XPostFinanceFeatures:
         
         return response.json()
 
-    def get_user_id(self, username="self"):
-        """Obtenir l'ID de l'utilisateur authentifié ou d'un autre utilisateur"""
-        if username == "self":
-            url = "https://api.twitter.com/2/users/me"
-        else:
-            url = f"https://api.twitter.com/2/users/by/username/{username}"
-        
-        response = self.oauth.get(url)
-        
-        if response.status_code != 200:
-            raise Exception(f"Erreur lors de la récupération de l'ID utilisateur: {response.status_code} {response.text}")
-        
-        user_info = response.json()
-        return user_info['data']['id']
-    
     def get_followers(self, user_id, max_results=10):
         """Méthode pour récupérer les abonnés d'un utilisateur"""
         url = f"https://api.twitter.com/2/users/{user_id}/followers"

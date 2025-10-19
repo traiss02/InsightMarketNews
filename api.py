@@ -160,18 +160,6 @@ class XPostFinanceFeatures:
         if response.status_code != 200:
             raise Exception(f"Erreur lors de l'arrêt du suivi: {response.status_code} {response.text}")
         return response.json()
-
-    def get_user_id(self, username="self"):
-        """Méthode pour récupérer l'ID utilisateur (modifiée pour fonctionner avec followers)"""
-        if username == "self":
-            url = "https://api.twitter.com/2/users/me"
-        else:
-            url = f"https://api.twitter.com/2/users/by/username/{username}"
-        response = self.oauth.get(url)
-        if response.status_code != 200:
-            raise Exception(f"Erreur lors de la récupération de l'ID utilisateur: {response.status_code} {response.text}")
-        user_info = response.json()
-        return user_info['data']['id']
     
     def search_users(self, query, max_results=10):
         """Recherche d'utilisateurs par mot-clé"""

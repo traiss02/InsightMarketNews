@@ -11,7 +11,7 @@ CONSUMER_SECRET = os.getenv('CONSUMER_SECRET')
 ACCESS_TOKEN = os.getenv('ACCESS_TOKEN')
 ACCESS_TOKEN_SECRET = os.getenv('ACCESS_TOKEN_SECRET')
 DATA_PATH = os.getenv('DATA_PATH')
-AWS_API_GATEWAY_URL = os.getenv('AWS_API_GETWAY')
+AWS_API_GATEWAY_URL = os.getenv('AWS_API_GATEWAY')
 TOP_N = 4
 
 def get_filename(date):

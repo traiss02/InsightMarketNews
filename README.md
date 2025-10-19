@@ -65,7 +65,7 @@ Configurez les clés API pour **Twitter (X v2)** dans le fichier `.env`.
 
 ## Contribuer
 
-Ce projet dévéloppé **traiss02** et **mohamedberte** . Les contributions sont les bienvenues ! Veuillez soumettre une **pull request** ou ouvrir une **issue** pour discuter des améliorations.
+Ce projet est développé par **traiss02** et **mohamedberte**. Les contributions sont les bienvenues ! Veuillez soumettre une **pull request** ou ouvrir une **issue** pour discuter des améliorations.
 
 ## Licence
 
@@ -82,7 +82,7 @@ knowledge/
     post/
         crypto_post_2025-02-02.txt
 main.py
-readMe.md
+README.md
 ```
 
 ## Description des Fichiers
@@ -92,7 +92,7 @@ readMe.md
 - `knowledge/post/` : Dossier contenant les fichiers texte des posts quotidiens sur les performances des cryptomonnaies.
 - `.env` : Fichier de configuration des clés API.
 - `.gitignore` : Liste des fichiers et dossiers à ignorer dans Git.
-- `readMe.md` : Documentation du projet.
+- `README.md` : Documentation du projet.
 
 ## Exécution du Script Principal
 

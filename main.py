@@ -6,6 +6,7 @@ from api import AwsApiGateWay, XPostFinanceFeatures
 
 load_dotenv(override=True)
 
+# Load and validate environment variables
 CONSUMER_KEY = os.getenv('CONSUMER_KEY')
 CONSUMER_SECRET = os.getenv('CONSUMER_SECRET')
 ACCESS_TOKEN = os.getenv('ACCESS_TOKEN')
@@ -13,6 +14,21 @@ ACCESS_TOKEN_SECRET = os.getenv('ACCESS_TOKEN_SECRET')
 DATA_PATH = os.getenv('DATA_PATH')
 AWS_API_GATEWAY_URL = os.getenv('AWS_API_GETWAY')
 TOP_N = 4
+
+# Validate required environment variables
+required_env_vars = {
+    'CONSUMER_KEY': CONSUMER_KEY,
+    'CONSUMER_SECRET': CONSUMER_SECRET,
+    'ACCESS_TOKEN': ACCESS_TOKEN,
+    'ACCESS_TOKEN_SECRET': ACCESS_TOKEN_SECRET,
+    'DATA_PATH': DATA_PATH,
+    'AWS_API_GETWAY': AWS_API_GATEWAY_URL
+}
+
+missing_vars = [var for var, value in required_env_vars.items() if not value]
+if missing_vars:
+    raise ValueError(f"Missing required environment variables: {', '.join(missing_vars)}. "
+                     f"Please check your .env file or refer to .env.example")
 
 def get_filename(date):
     return f"{DATA_PATH}crypto_performance_data_{date.strftime('%Y-%m-%d')}.csv"
